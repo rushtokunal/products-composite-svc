@@ -16,12 +16,13 @@ holds composite services for getting products and retail and updating retail
   ```
 
 ### List of Product and Retail Routes, all are deployed in Google cloud platform and LIVE and PRODUCTION READY
+Here we have chosen 567 as the product id
 | Request | Endpoint |  Details |
 | --- | --- | --- |
-| `GET` | `https://product-catalog-dot-python-game-changer.appspot.com/products/567`| Get Product by ID
-| `GET` | `https://product-retail-dot-python-game-changer.appspot.com/products-retail/567/`| Get Retail by ID|
-| `GET` | `https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/567`| Get Product+Retail Id|
-| `PUT` | `https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/567`| Update Retail|
+| `GET` | (https://product-catalog-dot-python-game-changer.appspot.com/products/567)| Get Product by ID
+| `GET` | (https://product-retail-dot-python-game-changer.appspot.com/products-retail/567/)| Get Retail by ID|
+| `GET` | (https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/567)| Get Product+Retail Id|
+| `PUT` | (https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/567)| Update Retail|
 
 ```
 use this as the PUT request body to update the retail
@@ -29,7 +30,7 @@ use this as the PUT request body to update the retail
 	"product_id": "567",
 	"current_price": "6.43",
 	"currency_code": "CAD",
-    "updated_by": "rt"
+        "updated_by": "rt"
 }
 ```
 
