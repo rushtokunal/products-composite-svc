@@ -1,0 +1,6 @@
+runtime: python37
+
+service: product-composite-svc
+
+env_variables:
+  BUCKET_NAME: "example-gcs-bucket"

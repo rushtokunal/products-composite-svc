@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/products-svc/<string:product_id>', methods=['GET','PUT'])
 def get_products(product_id):
-    product_url = "http://127.0.0.1:5000/products/"+str(product_id)
-    product_retl_url = "http://127.0.0.1:5002/products-retail/"+str(product_id)
+    product_url = "https://product-catalog-dot-python-game-changer.appspot.com/products/"+str(product_id)
+    product_retl_url = "https://product-retail-dot-python-game-changer.appspot.com/products-retail/"+str(product_id)
 
     def get_combine():
         r_prod = requests.get(url = product_url)
