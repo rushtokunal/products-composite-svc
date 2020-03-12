@@ -7,9 +7,9 @@ holds composite services for getting products and retail and updating retail
 </p>
 
 ### Brief of the work
-1. Created a NOSQL DB to hold products ids, description etc. and a REST service which exposes Product Catalog the details of the service is in this repository ``` + https://github.com/rushtokunal/products-catalog```
-2. Created a NOSQL DB to hold product retail, currency etc. and a REST service which exposes Product Retail the details of the service is in this repository ``` + https://github.com/rushtokunal/products-retail```
-3. Create a composite service which calls the above two services and combines the Product and retail information. BONUS, the composite service an also update the retail and currency of the product by id, the service is in this repository ```+https://github.com/rushtokunal/products-composite-svc```
+1. Created a NOSQL DB to hold products ids, description etc. and a REST service which exposes Product Catalog the details of the service is in this repository (https://github.com/rushtokunal/products-catalog)
+2. Created a NOSQL DB to hold product retail, currency etc. and a REST service which exposes Product Retail the details of the service is in this repository (https://github.com/rushtokunal/products-retail)
+3. Create a composite service which calls the above two services and combines the Product and retail information. BONUS, the composite service an also update the retail and currency of the product by id, the service is in this repository (https://github.com/rushtokunal/products-composite-svc)
 4. deployed all the services in Google App Engine using
   ```
   gcloud app deploy
