@@ -8,6 +8,10 @@ os.environ['no_proxy']='*'
 app = Flask(__name__)
 #CORS(app)
 
+@app.route('/', methods=['GET'])
+def hello():
+    return "Welcome to the Product Catalog composite Service Suite", 200
+
 @app.route('/products-svc/<string:product_id>', methods=['GET','PUT'])
 def get_products(product_id):
     product_url = "https://product-catalog-dot-python-game-changer.appspot.com/products/"+str(product_id)
@@ -33,6 +37,5 @@ def get_products(product_id):
                 'updated_by':request.json['updated_by']}
         resp_retl_upd = requests.put(url = product_retl_url, data = json.dumps(data), headers=header)
         return get_combine(), 201 #code 201 for successful PUT and GET
-
 if __name__ == '__main__':
     app.run(debug=True)

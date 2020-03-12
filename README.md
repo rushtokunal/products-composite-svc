@@ -30,6 +30,20 @@ use this as the PUT request body to update the retail
 }
 ```
 
+### Automated Test cases using Pytest
+The automated test cases are located in the tests folder
+follow the steps to run the automated test suite
+1) run the composite service locally (you need python 3.7 installed)
+   ```
+   pip install -r requirements.txt
+   python main.py
+   the composite service will start in http://127.0.0.1:5000/
+   ```
+2) to run the test suite just run
+   ```
+   pytest -v
+   ```
+
 ### Create python virtual env and install requirements 
 ```sh
 pip install -r requirements.txt
