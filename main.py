@@ -14,13 +14,19 @@ def hello():
 
 @app.route('/products-svc/<string:product_id>', methods=['GET','PUT'])
 def get_products(product_id):
-    product_url = "https://product-catalog-dot-python-game-changer.appspot.com/products/"+str(product_id)
+    product_url = "https://redsky.target.com/v2/pdp/tcin/"+str(product_id) # 13860428
+    #product_url = "https://product-catalog-dot-python-game-changer.appspot.com/products/"+str(product_id)
     product_retl_url = "https://product-retail-dot-python-game-changer.appspot.com/products-retail/"+str(product_id)
 
     def get_combine():
+        header = {"content-type": "application/json"}
         r_prod = requests.get(url = product_url)
+        data = r_prod.json()
+        #print(data['product']['item']['product_description']['title'])
         r_prod_retl = requests.get(url = product_retl_url)
-        combine = r_prod.json()
+        product_data = {'product_id':product_id,
+                       'name':data['product']['item']['product_description']['title']}
+        combine = product_data
         combine.update(r_prod_retl.json())
         return combine
 
@@ -38,4 +44,4 @@ def get_products(product_id):
         resp_retl_upd = requests.put(url = product_retl_url, data = json.dumps(data), headers=header)
         return get_combine(), 201 #code 201 for successful PUT and GET
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5003,debug=True)
