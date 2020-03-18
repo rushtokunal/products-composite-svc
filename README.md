@@ -21,8 +21,8 @@ Here we have chosen 567 as the product id
 | --- | --- | --- |
 | `GET` | (https://product-catalog-dot-python-game-changer.appspot.com/products/567)| Get Product by ID
 | `GET` | (https://product-retail-dot-python-game-changer.appspot.com/products-retail/567/)| Get Retail by ID|
-| `GET` | (https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/567)| Get Product+Retail Id|
-| `PUT` | (https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/567)| Update Retail|
+| `GET` | (https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/13860428)| Get Product+Retail Id|
+| `PUT` | (https://product-composite-svc-dot-python-game-changer.appspot.com/products-svc/13860428)| Update Retail|
 
 ```
 use this as the PUT request body to update the retail
